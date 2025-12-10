@@ -1,93 +1,126 @@
+import { Link } from "react-router-dom";
 
 export default function WatchlistsProduct() {
-  const benefits = ['Configure which watchlists to use by role and geography.', 'Log screening events for audits and internal reviews.', 'Evolve coverage as your markets and risk profile change.']
-
   return (
-    <div className="bg-white">
-      <section className="section-container py-14 sm:py-16 grid md:grid-cols-2 gap-10 items-center text-sm">
-        <div>
-          <p className="text-[11px] font-semibold tracking-[0.25em] uppercase mb-2 text-orange-500">
-            Product
-          </p>
-          <h1 className="text-2xl sm:text-3xl font-bold mb-3">Watchlists & Sanctions Screening</h1>
-          <p className="text-slate-600 mb-4">
-            Screen candidates against relevant sanctions and watchlists where your policies or regulations require additional checks.
-          </p>
-        </div>
-        <img
-          src={"https://picsum.photos/seed/watchlists-product/960/640"}
-          alt="Watchlists & Sanctions Screening"
-          className="w-full rounded-3xl shadow-card object-cover max-h-[420px]"
-        />
-      </section>
+    <div className="space-y-24">
 
-      <section className="section-container py-6 sm:py-8 text-sm">
-        <h2 className="text-lg font-semibold mb-3">What this product helps you do</h2>
-        <ul className="list-disc list-inside text-xs text-slate-600 space-y-1 max-w-2xl">
-          {benefits.map((b) => (
-            <li key={b}>{b}</li>
-          ))}
-        </ul>
-      </section>
+      {/* 🌟 HERO */}
+      <section className="relative py-24 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-yellow-100/40 via-orange-100/30 to-white" />
+        <div className="section-container relative z-10 max-w-3xl mx-auto text-center space-y-4">
+          <p className="text-xs uppercase tracking-[0.25em] text-brand-primary font-semibold">
+            Watchlists & Sanctions
+          </p>
 
-      <section className="bg-brand-primarySoft mt-6">
-        <div className="section-container py-10 grid md:grid-cols-3 gap-6 text-sm">
-          <div className="card-soft p-5">
-            <h3 className="text-sm font-semibold mb-1">1. Configure flows</h3>
-            <p className="text-xs text-slate-600">
-              Decide when this product is used, for which roles, and at what depth — so you don&apos;t over-screen or under-screen.
-            </p>
-          </div>
-          <div className="card-soft p-5">
-            <h3 className="text-sm font-semibold mb-1">2. Collect data from candidates</h3>
-            <p className="text-xs text-slate-600">
-              Candidates complete a mobile-friendly flow to provide documents and consent, with clear expectations up front.
-            </p>
-          </div>
-          <div className="card-soft p-5">
-            <h3 className="text-sm font-semibold mb-1">3. Review & move forward</h3>
-            <p className="text-xs text-slate-600">
-              TruVerifyAI surfaces results with clear statuses and reason codes so your team can decide quickly and fairly.
-            </p>
-          </div>
-        </div>
-      </section>
+          <h1 className="text-4xl md:text-5xl font-bold text-slate-900">
+            Screen candidates against global risk lists in one click.
+          </h1>
 
-      <section className="section-container py-12 text-sm grid md:grid-cols-3 gap-6">
-        <div className="card-soft p-5">
-          <h3 className="text-sm font-semibold mb-1">People & talent teams</h3>
-          <p className="text-xs text-slate-600">
-            Give recruiters clarity into what&apos;s being checked and when, without overwhelming them with noise.
+          <p className="text-sm md:text-base text-slate-600">
+            Check individuals against PEP, AML and international sanctions databases to reduce
+            regulatory and reputational risk.
           </p>
-        </div>
-        <div className="card-soft p-5">
-          <h3 className="text-sm font-semibold mb-1">Ops & marketplace teams</h3>
-          <p className="text-xs text-slate-600">
-            Scale verification for high-volume roles while keeping supply flowing and risk in check.
-          </p>
-        </div>
-        <div className="card-soft p-5">
-          <h3 className="text-sm font-semibold mb-1">Risk, legal & compliance</h3>
-          <p className="text-xs text-slate-600">
-            Ensure that checks run consistently according to policy, with audit-ready documentation when you need it.
-          </p>
-        </div>
-      </section>
 
-      <section className="bg-brand-primary text-white">
-        <div className="section-container py-14 text-center text-sm">
-          <h2 className="text-2xl font-semibold mb-2">See Watchlists & Sanctions Screening in action</h2>
-          <p className="text-orange-50 mb-4 max-w-xl mx-auto">
-            Walk through a sample candidate journey and see how this product fits into your hiring or onboarding flows.
-          </p>
-          <a
-            href="/contact"
-            className="inline-flex items-center px-6 py-2.5 rounded-full bg-white text-brand-primary text-xs sm:text-sm font-medium"
+          <Link
+            to="/contact"
+            className="mt-4 inline-block bg-brand-primary text-white px-8 py-3 rounded-full font-semibold"
           >
             Request a demo
-          </a>
+          </Link>
         </div>
       </section>
+
+      {/* 🖼 FEATURE IMAGE + DESCRIPTION */}
+      <section className="section-container grid md:grid-cols-2 gap-12 items-center">
+        <img
+          src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1400&q=80"
+          className="rounded-3xl shadow-xl object-cover max-h-[440px]"
+          alt="Watchlists & sanctions screening"
+        />
+
+        <div className="space-y-4">
+          <h2 className="text-2xl md:text-3xl font-bold text-slate-900">
+            One view of global risk signals.
+          </h2>
+
+          <p className="text-sm text-slate-600 leading-relaxed">
+            TruVerifyAI surfaces potential matches across global watchlists, then lets your
+            compliance or risk team review, annotate and document decisions in a single place.
+          </p>
+
+          <ul className="list-disc list-inside text-sm text-slate-700 space-y-1">
+            <li>PEP (Politically Exposed Persons) checks</li>
+            <li>International sanctions & enforcement lists</li>
+            <li>AML and financial crime watchlists</li>
+            <li>Case notes and decision audit trails</li>
+          </ul>
+        </div>
+      </section>
+
+      {/* ⚡ HIGHLIGHT METRICS */}
+      <section className="section-container grid md:grid-cols-3 gap-6">
+        {[
+          ["2000+", "Lists monitored via partners"],
+          ["Real-time", "Risk list updates"],
+          ["Single view", "Consolidated match review"],
+        ].map(([v, l], i) => (
+          <div
+            key={i}
+            className="p-6 bg-brand-primary text-white rounded-2xl shadow-md text-center"
+          >
+            <div className="text-3xl font-bold">{v}</div>
+            <p className="text-xs mt-1 text-orange-100">{l}</p>
+          </div>
+        ))}
+      </section>
+
+      {/* USE CASES */}
+      <section className="section-container space-y-8">
+        <h2 className="text-2xl font-bold text-slate-900 text-center">
+          Ideal for risk-sensitive hiring
+        </h2>
+
+        <div className="grid md:grid-cols-3 gap-8">
+          {[
+            {
+              title: "Fintech & payments",
+              desc: "Screen high-risk and high-value roles handling customer funds.",
+            },
+            {
+              title: "Banking & NBFCs",
+              desc: "Support AML programs with consistent candidate screening.",
+            },
+            {
+              title: "Compliance-heavy roles",
+              desc: "Add an extra layer of diligence for senior and regulated positions.",
+            },
+          ].map((card, i) => (
+            <div
+              key={i}
+              className="p-6 bg-white rounded-xl border shadow-sm hover:shadow-lg transition"
+            >
+              <h3 className="font-semibold text-slate-900 mb-1">{card.title}</h3>
+              <p className="text-sm text-slate-600">{card.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="bg-brand-primary text-white py-16 text-center">
+        <h2 className="text-2xl md:text-3xl font-bold">Stay ahead of regulatory expectations.</h2>
+        <p className="text-sm text-orange-200 mt-2">
+          Add watchlist screening wherever compliance and reputation matter most.
+        </p>
+
+        <Link
+          to="/contact"
+          className="mt-5 inline-block bg-white text-brand-primary px-8 py-3 rounded-full font-semibold"
+        >
+          Talk to our team
+        </Link>
+      </section>
+
     </div>
-  )
+  );
 }

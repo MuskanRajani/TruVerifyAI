@@ -1,93 +1,200 @@
+import { Link } from "react-router-dom";
 
 export default function EducationProduct() {
-  const benefits = ['Capture and review degree certificates and transcripts.', 'Validate institutions, programs and graduation timelines.', 'Support both local and international education journeys.']
-
   return (
-    <div className="bg-white">
-      <section className="section-container py-14 sm:py-16 grid md:grid-cols-2 gap-10 items-center text-sm">
-        <div>
-          <p className="text-[11px] font-semibold tracking-[0.25em] uppercase mb-2 text-orange-500">
-            Product
-          </p>
-          <h1 className="text-2xl sm:text-3xl font-bold mb-3">Education Verification</h1>
-          <p className="text-slate-600 mb-4">
-            Support verification of degrees and education history for roles where education is a key requirement or regulatory expectation.
+    <div className="space-y-28">
+
+      {/* 🎓 HERO — EDUCATION + TRUST THEME */}
+      <section className="relative py-24 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-sky-50 via-indigo-100/40 to-white" />
+
+        <div className="section-container relative z-10 max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+
+          {/* LEFT */}
+          <div className="space-y-5">
+            <p className="text-xs uppercase tracking-[0.25em] text-brand-primary font-semibold">
+              Education Verification
+            </p>
+
+            <h1 className="text-4xl md:text-5xl font-bold text-slate-900 leading-tight">
+              Verify academic credentials with global accuracy and zero guesswork.
+            </h1>
+
+            <p className="text-sm md:text-base text-slate-600">
+              TruVerifyAI validates degrees, institutions, courses and completion records to ensure
+              your candidates meet real-world qualification requirements — not just résumé claims.
+            </p>
+
+            <div className="flex gap-4">
+              <Link
+                to="/contact"
+                className="inline-block bg-brand-primary text-white px-7 py-3 rounded-full font-semibold"
+              >
+                Request a demo
+              </Link>
+
+              <Link
+                to="/products"
+                className="inline-block border border-brand-primary text-brand-primary px-7 py-3 rounded-full font-semibold"
+              >
+                View all products
+              </Link>
+            </div>
+          </div>
+
+          {/* RIGHT IMAGE */}
+          <img
+            src="https://images.pexels.com/photos/3184613/pexels-photo-3184613.jpeg?auto=compress&cs=tinysrgb&w=1200"
+            alt="Education verification and degree validation"
+            className="rounded-3xl shadow-xl object-cover max-h-[460px] w-full"
+          />
+        </div>
+      </section>
+
+      {/* ✅ WHAT WE VERIFY — DETAILED GRID */}
+      <section className="section-container">
+        <div className="max-w-3xl mb-12">
+          <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-3">
+            What TruVerifyAI verifies across education records
+          </h2>
+          <p className="text-sm text-slate-600">
+            Our verification engine goes beyond surface-level document checks to ensure full academic authenticity.
           </p>
         </div>
+
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          {[
+            ["Degree authenticity", "Confirm awarded degrees directly against submitted documents and source data."],
+            ["University legitimacy", "Detect fake, unaccredited or blacklisted institutions automatically."],
+            ["Course & specialization", "Ensure the field of study matches the job’s real qualification needs."],
+            ["Study duration", "Validate enrollment periods, graduation timelines and overlaps."],
+            ["Transcript integrity", "Detect tampering, mismatches and manual edits in marksheets."],
+            ["Mode of education", "Differentiate full-time, online, distance and hybrid programs."],
+            ["Equivalency validation", "Normalize international degrees across regional education systems."],
+            ["Active vs revoked status", "Identify degrees that are suspended, revoked or under investigation."],
+          ].map(([title, desc], i) => (
+            <div
+              key={i}
+              className="p-6 rounded-2xl bg-white border shadow-sm hover:shadow-lg transition"
+            >
+              <h3 className="font-semibold text-slate-900 mb-2">{title}</h3>
+              <p className="text-sm text-slate-600">{desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+    
+      {/* 🌍 GLOBAL COVERAGE + COMPLIANCE */}
+      <section className="section-container grid md:grid-cols-2 gap-12 items-center">
+
+        <div className="space-y-4">
+          <h2 className="text-2xl md:text-3xl font-bold text-slate-900">
+            Built for global academic verification at scale
+          </h2>
+
+          <p className="text-sm text-slate-600">
+            TruVerifyAI supports multi-country education verification with region-specific rules,
+            local education boards and internationally recognized equivalency standards.
+          </p>
+
+          <ul className="list-disc list-inside text-sm text-slate-700 space-y-1">
+            <li>40+ countries supported across major education regions</li>
+            <li>Localized document formats and grading systems</li>
+            <li>GDPR-aligned data processing and consent tracking</li>
+            <li>Audit-ready verification trails for regulators</li>
+          </ul>
+        </div>
+
         <img
-          src={"https://picsum.photos/seed/education-product/960/640"}
-          alt="Education Verification"
-          className="w-full rounded-3xl shadow-card object-cover max-h-[420px]"
+          src="https://images.pexels.com/photos/5940836/pexels-photo-5940836.jpeg?auto=compress&cs=tinysrgb&w=1200"
+          alt="Global education verification coverage"
+          className="rounded-3xl shadow-xl object-cover max-h-[420px] w-full"
         />
       </section>
 
-      <section className="section-container py-6 sm:py-8 text-sm">
-        <h2 className="text-lg font-semibold mb-3">What this product helps you do</h2>
-        <ul className="list-disc list-inside text-xs text-slate-600 space-y-1 max-w-2xl">
-          {benefits.map((b) => (
-            <li key={b}>{b}</li>
-          ))}
-        </ul>
+      {/* 🎯 HIGH-IMPACT USE CASES */}
+      <section className="section-container">
+        <h2 className="text-2xl font-bold text-slate-900 text-center mb-12">
+          Where education verification is mission-critical
+        </h2>
+
+        <div className="grid md:grid-cols-3 gap-10">
+
+          <div className="rounded-2xl overflow-hidden shadow-lg bg-white">
+            <img
+              src="https://images.pexels.com/photos/8553860/pexels-photo-8553860.jpeg?auto=compress&cs=tinysrgb&w=1000"
+              className="h-40 w-full object-cover"
+              alt="Tech hiring graduates"
+            />
+            <div className="p-6">
+              <h3 className="font-semibold mb-1">Technology & SaaS Hiring</h3>
+              <p className="text-sm text-slate-600">
+                Prevent résumé exaggeration across engineering, data science and product roles.
+              </p>
+            </div>
+          </div>
+
+          <div className="rounded-2xl overflow-hidden shadow-lg bg-white">
+            <img
+              src="https://images.pexels.com/photos/8460095/pexels-photo-8460095.jpeg?auto=compress&cs=tinysrgb&w=1000"
+              className="h-40 w-full object-cover"
+              alt="Healthcare credential verification"
+            />
+            <div className="p-6">
+              <h3 className="font-semibold mb-1">Healthcare & Life Sciences</h3>
+              <p className="text-sm text-slate-600">
+                Validate clinical qualifications to protect patients and meet regulatory requirements.
+              </p>
+            </div>
+          </div>
+
+          <div className="rounded-2xl overflow-hidden shadow-lg bg-white">
+            <img
+              src="https://images.pexels.com/photos/3184306/pexels-photo-3184306.jpeg?auto=compress&cs=tinysrgb&w=1000"
+              className="h-40 w-full object-cover"
+              alt="Campus hiring programs"
+            />
+            <div className="p-6">
+              <h3 className="font-semibold mb-1">Campus & Graduate Programs</h3>
+              <p className="text-sm text-slate-600">
+                Stop fake degrees and backdated certificates before early-career onboarding.
+              </p>
+            </div>
+          </div>
+
+        </div>
       </section>
 
-      <section className="bg-brand-primarySoft mt-6">
-        <div className="section-container py-10 grid md:grid-cols-3 gap-6 text-sm">
-          <div className="card-soft p-5">
-            <h3 className="text-sm font-semibold mb-1">1. Configure flows</h3>
-            <p className="text-xs text-slate-600">
-              Decide when this product is used, for which roles, and at what depth — so you don&apos;t over-screen or under-screen.
-            </p>
-          </div>
-          <div className="card-soft p-5">
-            <h3 className="text-sm font-semibold mb-1">2. Collect data from candidates</h3>
-            <p className="text-xs text-slate-600">
-              Candidates complete a mobile-friendly flow to provide documents and consent, with clear expectations up front.
-            </p>
-          </div>
-          <div className="card-soft p-5">
-            <h3 className="text-sm font-semibold mb-1">3. Review & move forward</h3>
-            <p className="text-xs text-slate-600">
-              TruVerifyAI surfaces results with clear statuses and reason codes so your team can decide quickly and fairly.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section className="section-container py-12 text-sm grid md:grid-cols-3 gap-6">
-        <div className="card-soft p-5">
-          <h3 className="text-sm font-semibold mb-1">People & talent teams</h3>
-          <p className="text-xs text-slate-600">
-            Give recruiters clarity into what&apos;s being checked and when, without overwhelming them with noise.
-          </p>
-        </div>
-        <div className="card-soft p-5">
-          <h3 className="text-sm font-semibold mb-1">Ops & marketplace teams</h3>
-          <p className="text-xs text-slate-600">
-            Scale verification for high-volume roles while keeping supply flowing and risk in check.
-          </p>
-        </div>
-        <div className="card-soft p-5">
-          <h3 className="text-sm font-semibold mb-1">Risk, legal & compliance</h3>
-          <p className="text-xs text-slate-600">
-            Ensure that checks run consistently according to policy, with audit-ready documentation when you need it.
+      {/* 🔐 SECURITY + DATA INTEGRITY */}
+      <section className="bg-brand-primarySoft py-16">
+        <div className="section-container max-w-4xl mx-auto text-center space-y-3">
+          <h2 className="text-2xl font-bold">Education data protected by enterprise-grade security</h2>
+          <p className="text-sm text-slate-700">
+            All records are encrypted in transit and at rest, role-based access is enforced,
+            and every verification is logged with complete audit visibility.
           </p>
         </div>
       </section>
 
-      <section className="bg-brand-primary text-white">
-        <div className="section-container py-14 text-center text-sm">
-          <h2 className="text-2xl font-semibold mb-2">See Education Verification in action</h2>
-          <p className="text-orange-50 mb-4 max-w-xl mx-auto">
-            Walk through a sample candidate journey and see how this product fits into your hiring or onboarding flows.
-          </p>
-          <a
-            href="/contact"
-            className="inline-flex items-center px-6 py-2.5 rounded-full bg-white text-brand-primary text-xs sm:text-sm font-medium"
-          >
-            Request a demo
-          </a>
-        </div>
+      {/* ✅ FINAL CTA */}
+      <section className="bg-brand-primary text-white py-16 text-center">
+        <h2 className="text-2xl md:text-3xl font-bold">
+          Stop academic fraud before it enters your organization.
+        </h2>
+
+        <p className="text-sm text-orange-100 mt-2">
+          Verify degrees, courses and institutions globally — in minutes.
+        </p>
+
+        <Link
+          to="/contact"
+          className="mt-5 inline-block bg-white text-brand-primary px-8 py-3 rounded-full font-semibold"
+        >
+          Talk to our team
+        </Link>
       </section>
+
     </div>
-  )
+  );
 }

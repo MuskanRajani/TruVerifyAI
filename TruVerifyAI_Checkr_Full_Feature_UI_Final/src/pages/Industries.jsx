@@ -1,126 +1,131 @@
+import { Link } from "react-router-dom";
+
 export default function Industries() {
-  const sections = [
-    {
-      id: 'gig',
-      title: 'Gig platforms & last-mile logistics',
-      text: 'Onboard thousands of drivers, riders, shoppers, and providers with flows designed for speed and trust. Reduce drop-off while catching risky or duplicate profiles early.',
-      bullets: [
-        'Mobile-first journeys optimized for low-friction signups',
-        'Configurable region-by-region checks',
-        'Flags for duplicate identities and suspicious patterns',
-      ],
-      img: 'https://picsum.photos/seed/gig-orange/960/640',
-    },
-    {
-      id: 'fintech',
-      title: 'Fintech & financial services',
-      text: 'Hire for high-trust roles handling payments, credit, and risk analysis while staying aligned with evolving regulations.',
-      bullets: [
-        'Stronger identity and address verification defaults',
-        'Support for role-based screening depth',
-        'Audit-friendly logs and risk reason codes',
-      ],
-      img: 'https://picsum.photos/seed/fintech-orange/960/640',
-    },
-    {
-      id: 'healthcare',
-      title: 'Healthcare & life sciences',
-      text: 'Support compliance-heavy roles in clinical, research, and patient-facing environments with document-based verification today and deeper integrations over time.',
-      bullets: [
-        'Education and license verification (document-based)',
-        'Additional checks for sensitive or regulated positions',
-        'Configurable by facility type and geography',
-      ],
-      img: 'https://picsum.photos/seed/health-orange/960/640',
-    },
-    {
-      id: 'staffing',
-      title: 'Staffing & recruitment firms',
-      text: 'Deliver a differentiated candidate experience while meeting client SLAs across multiple regions and job families.',
-      bullets: [
-        'Bulk cohort creation and tracking',
-        'Recruiter-friendly dashboards and statuses',
-        'White-label ready candidate communications (roadmap)',
-      ],
-      img: 'https://picsum.photos/seed/staffing-orange/960/640',
-    },
-    {
-      id: 'tech',
-      title: 'Technology & product companies',
-      text: 'Verify engineers, PMs, designers, and GTM teams as you hire across hubs, remote regions, and timezones.',
-      bullets: [
-        'Experience and overlap checks for senior roles',
-        'Education and credential verification',
-        'Support for hiring across multiple entities and regions',
-      ],
-      img: 'https://picsum.photos/seed/tech-orange/960/640',
-    },
-  ]
+  const industries = [
+  {
+    title: "Financial Services",
+    desc: "Background checks for banking, lending, payments and risk teams with KYC, AML and audit readiness.",
+    link: "/industries/financial-services",
+    // ✅ Finance / banking specific
+    img: "https://images.pexels.com/photos/210574/pexels-photo-210574.jpeg?auto=compress&cs=tinysrgb&w=1200",
+  },
+  {
+    title: "Gig & Marketplaces",
+    desc: "High-volume onboarding for drivers, riders and delivery partners with fraud and duplicate detection.",
+    link: "/industries/gig",
+    // ✅ Delivery rider / gig worker
+    img: "https://images.pexels.com/photos/4391474/pexels-photo-4391474.jpeg?auto=compress&cs=tinysrgb&w=1200",
+  },
+  {
+    title: "Healthcare",
+    desc: "Credential, license, education and background verification for clinical and patient-facing roles.",
+    link: "/industries/healthcare",
+    // ✅ Doctor / hospital
+    img: "https://images.pexels.com/photos/8460156/pexels-photo-8460156.jpeg?auto=compress&cs=tinysrgb&w=1200",
+  },
+  {
+    title: "Retail & Ecommerce",
+    desc: "Fast screening for store staff, warehouse workers and fulfillment teams during peak hiring.",
+    link: "/industries/retail",
+    // ✅ Warehouse / retail operations
+    img: "https://images.pexels.com/photos/6169056/pexels-photo-6169056.jpeg?auto=compress&cs=tinysrgb&w=1200",
+  },
+  {
+    title: "Staffing & Recruitment",
+    desc: "Bulk verification for staffing firms managing large candidate pipelines.",
+    link: "/industries/staffing",
+    // ✅ Recruiter interview / HR hiring
+    img: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1200",
+  },
+  {
+    title: "Technology & SaaS",
+    desc: "Remote-first verification for engineers, product, sales and operations teams worldwide.",
+    link: "/industries/technology",
+    // ✅ Software engineers / tech team
+    img: "https://images.pexels.com/photos/1181359/pexels-photo-1181359.jpeg?auto=compress&cs=tinysrgb&w=1200",
+  },
+];
+
 
   return (
-    <div className="bg-white">
-      <section className="section-container py-14 sm:py-16 text-sm">
-        <p className="text-[11px] font-semibold tracking-[0.25em] uppercase mb-2 text-orange-500">
-          Industries
-        </p>
-        <h1 className="text-2xl sm:text-3xl font-bold mb-3">Where TruVerifyAI fits best</h1>
-        <p className="text-slate-600 max-w-2xl">
-          Built with fast-moving, technology-forward organizations in mind — from marketplace platforms and delivery
-          networks to fintech, healthcare, and staffing providers.
-        </p>
-      </section>
+    <div className="space-y-20">
 
-      {sections.map((s, index) => (
-        <section
-          key={s.id}
-          className={`section-container py-16 sm:py-20 grid md:grid-cols-2 gap-10 items-center ${
-            index % 2 === 1 ? 'md:flex-row-reverse' : ''
-          }`}
-        >
-          <div className="relative order-2 md:order-1">
-            <img
-              src={s.img}
-              alt={s.title}
-              className="w-full rounded-3xl shadow-card object-cover max-h-[420px]"
-            />
-            <div className="absolute -bottom-4 -right-4 bg-white/95 border border-orange-100 rounded-2xl shadow-card px-4 py-3 text-[11px] text-slate-600">
-              <div className="font-semibold text-slate-800 mb-1">Why this matters</div>
-              <p>
-                High-volume, trust-sensitive hiring needs flows that feel smooth for candidates but rigorous for your
-                risk and compliance teams.
-              </p>
-            </div>
-          </div>
+      {/* ✅ HEADER — SAME STRUCTURE AS PRODUCTS */}
+      <section className="py-16 bg-white border-b">
+        <div className="section-container text-center space-y-4">
+          <p className="text-xs tracking-[0.25em] uppercase text-brand-primary font-semibold">
+            Industries
+          </p>
 
-          <div className="space-y-4 order-1 md:order-2">
-            <h2 className="text-2xl font-semibold text-slate-900">{s.title}</h2>
-            <p className="text-sm text-slate-600">{s.text}</p>
-            <ul className="list-disc list-inside text-xs text-slate-600 space-y-1">
-              {s.bullets.map((b) => (
-                <li key={b}>{b}</li>
-              ))}
-            </ul>
-          </div>
-        </section>
-      ))}
+          <h1 className="text-4xl md:text-5xl font-bold text-slate-900">
+            Industry-specific background verification
+          </h1>
 
-      <section className="bg-brand-primarySoft mt-4">
-        <div className="section-container py-12 text-sm flex flex-col md:flex-row items-center justify-between gap-4">
-          <div>
-            <h2 className="text-lg font-semibold mb-1">Have a different use case?</h2>
-            <p className="text-xs text-slate-700 max-w-xl">
-              Many verification flows don&apos;t fit neatly into a single industry. TruVerifyAI is designed to handle
-              mixed use cases — from internal mobility to vendor, partner, or community checks.
-            </p>
-          </div>
-          <a
-            href="/contact"
-            className="px-5 py-2 rounded-full bg-brand-primary text-white text-xs sm:text-sm font-medium shadow-card"
-          >
-            Talk to us about your industry
-          </a>
+          <p className="text-sm text-slate-600 max-w-2xl mx-auto">
+            TruVerifyAI supports high-trust, high-volume and regulated hiring across multiple industries with
+            configurable verification workflows.
+          </p>
         </div>
       </section>
+
+      {/* ✅ GRID — SAME AS PRODUCTS */}
+      <section className="section-container">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+          {industries.map((i, index) => (
+            <Link
+              key={index}
+              to={i.link}
+              className="group rounded-2xl bg-white border border-slate-200 shadow-sm 
+                         hover:shadow-xl hover:border-brand-primary/50 transition-all overflow-hidden"
+            >
+              {/* ✅ IMAGE */}
+              <div className="h-44 w-full overflow-hidden">
+                <img
+                  src={i.img}
+                  alt={i.title}
+                  className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+
+              {/* ✅ CONTENT */}
+              <div className="p-6 space-y-2">
+                <h3 className="font-semibold text-lg text-slate-900">
+                  {i.title}
+                </h3>
+
+                <p className="text-sm text-slate-600">
+                  {i.desc}
+                </p>
+
+                <span className="inline-block mt-2 text-sm text-brand-primary font-semibold">
+                  View industry →
+                </span>
+              </div>
+            </Link>
+          ))}
+
+        </div>
+      </section>
+
+      {/* ✅ CTA — SIMPLE & CLEAN */}
+      <section className="bg-brand-primary text-white py-16 text-center">
+        <h2 className="text-2xl md:text-3xl font-bold">
+          Don’t see your industry here?
+        </h2>
+
+        <p className="text-sm text-orange-200 mt-2 max-w-xl mx-auto">
+          We configure custom verification workflows for unique and hybrid hiring models.
+        </p>
+
+        <Link
+          to="/contact"
+          className="mt-5 inline-block bg-white text-brand-primary px-8 py-3 rounded-full font-semibold"
+        >
+          Talk to our experts
+        </Link>
+      </section>
+
     </div>
-  )
+  );
 }

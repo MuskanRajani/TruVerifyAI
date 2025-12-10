@@ -1,93 +1,146 @@
+import { Link } from "react-router-dom";
 
 export default function CriminalProduct() {
-  const benefits = ['Connect to partner networks for regional criminal screening.', 'Track end-to-end status across pending, in progress and complete.', 'View outcomes in a single, consistent report format.']
-
   return (
-    <div className="bg-white">
-      <section className="section-container py-14 sm:py-16 grid md:grid-cols-2 gap-10 items-center text-sm">
-        <div>
-          <p className="text-[11px] font-semibold tracking-[0.25em] uppercase mb-2 text-orange-500">
-            Product
-          </p>
-          <h1 className="text-2xl sm:text-3xl font-bold mb-3">Criminal Background Checks</h1>
-          <p className="text-slate-600 mb-4">
-            Orchestrate criminal checks via regional partners from a single workflow, with clear statuses and outcomes for every candidate.
-          </p>
-        </div>
-        <img
-          src={"https://picsum.photos/seed/criminal-product/960/640"}
-          alt="Criminal Background Checks"
-          className="w-full rounded-3xl shadow-card object-cover max-h-[420px]"
-        />
-      </section>
+    <div className="space-y-24">
 
-      <section className="section-container py-6 sm:py-8 text-sm">
-        <h2 className="text-lg font-semibold mb-3">What this product helps you do</h2>
-        <ul className="list-disc list-inside text-xs text-slate-600 space-y-1 max-w-2xl">
-          {benefits.map((b) => (
-            <li key={b}>{b}</li>
-          ))}
-        </ul>
-      </section>
+      {/* 🌟 HERO */}
+      <section className="relative py-24 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-rose-50 via-orange-100/40 to-white" />
 
-      <section className="bg-brand-primarySoft mt-6">
-        <div className="section-container py-10 grid md:grid-cols-3 gap-6 text-sm">
-          <div className="card-soft p-5">
-            <h3 className="text-sm font-semibold mb-1">1. Configure flows</h3>
-            <p className="text-xs text-slate-600">
-              Decide when this product is used, for which roles, and at what depth — so you don&apos;t over-screen or under-screen.
-            </p>
-          </div>
-          <div className="card-soft p-5">
-            <h3 className="text-sm font-semibold mb-1">2. Collect data from candidates</h3>
-            <p className="text-xs text-slate-600">
-              Candidates complete a mobile-friendly flow to provide documents and consent, with clear expectations up front.
-            </p>
-          </div>
-          <div className="card-soft p-5">
-            <h3 className="text-sm font-semibold mb-1">3. Review & move forward</h3>
-            <p className="text-xs text-slate-600">
-              TruVerifyAI surfaces results with clear statuses and reason codes so your team can decide quickly and fairly.
-            </p>
-          </div>
-        </div>
-      </section>
+        <div className="section-container relative z-10 max-w-3xl mx-auto text-center space-y-4">
+          <p className="text-xs uppercase tracking-[0.25em] text-brand-primary font-semibold">
+            Criminal Background Checks
+          </p>
 
-      <section className="section-container py-12 text-sm grid md:grid-cols-3 gap-6">
-        <div className="card-soft p-5">
-          <h3 className="text-sm font-semibold mb-1">People & talent teams</h3>
-          <p className="text-xs text-slate-600">
-            Give recruiters clarity into what&apos;s being checked and when, without overwhelming them with noise.
-          </p>
-        </div>
-        <div className="card-soft p-5">
-          <h3 className="text-sm font-semibold mb-1">Ops & marketplace teams</h3>
-          <p className="text-xs text-slate-600">
-            Scale verification for high-volume roles while keeping supply flowing and risk in check.
-          </p>
-        </div>
-        <div className="card-soft p-5">
-          <h3 className="text-sm font-semibold mb-1">Risk, legal & compliance</h3>
-          <p className="text-xs text-slate-600">
-            Ensure that checks run consistently according to policy, with audit-ready documentation when you need it.
-          </p>
-        </div>
-      </section>
+          <h1 className="text-4xl md:text-5xl font-bold text-slate-900 leading-tight">
+            Responsible criminal screening for trust-critical roles.
+          </h1>
 
-      <section className="bg-brand-primary text-white">
-        <div className="section-container py-14 text-center text-sm">
-          <h2 className="text-2xl font-semibold mb-2">See Criminal Background Checks in action</h2>
-          <p className="text-orange-50 mb-4 max-w-xl mx-auto">
-            Walk through a sample candidate journey and see how this product fits into your hiring or onboarding flows.
+          <p className="text-sm md:text-base text-slate-600">
+            TruVerifyAI delivers partner-verified criminal record screening with
+            fairness, compliance, and regional accuracy built-in.
           </p>
-          <a
-            href="/contact"
-            className="inline-flex items-center px-6 py-2.5 rounded-full bg-white text-brand-primary text-xs sm:text-sm font-medium"
+
+          <Link
+            to="/contact"
+            className="mt-4 inline-block bg-brand-primary text-white px-8 py-3 rounded-full font-semibold"
           >
             Request a demo
-          </a>
+          </Link>
         </div>
       </section>
+
+      {/* 🖼 PROCESS + EXPLANATION */}
+      <section className="section-container grid md:grid-cols-2 gap-12 items-center">
+        <img
+          src="https://images.pexels.com/photos/5668858/pexels-photo-5668858.jpeg?auto=compress&cs=tinysrgb&w=1200"
+          className="rounded-3xl shadow-xl object-cover max-h-[440px]"
+          alt="Criminal verification workflow"
+        />
+
+        <div className="space-y-5">
+          <h2 className="text-2xl md:text-3xl font-bold text-slate-900">
+            Jurisdiction-aware criminal verification.
+          </h2>
+
+          <p className="text-sm text-slate-600 leading-relaxed">
+            TruVerifyAI connects with authorized regional partners to fetch legally
+            accessible criminal data and presents it with role-based relevance.
+          </p>
+
+          <ul className="list-disc list-inside text-sm text-slate-700 space-y-1">
+            <li>Accredited police & court database checks</li>
+            <li>Region-specific screening depth</li>
+            <li>Smart conviction relevance filtering</li>
+            <li>Escalation workflows for compliance teams</li>
+          </ul>
+        </div>
+      </section>
+
+      {/* ⚡ TRUST STRIP */}
+      <section className="bg-slate-900 py-14">
+        <div className="section-container grid md:grid-cols-3 gap-8 text-center">
+          {[
+            ["High-risk roles", "Delivery, finance, caregiving & asset handling"],
+            ["Regulated hiring", "Healthcare, fintech & staffing companies"],
+            ["Customer safety", "Protect people, data & physical assets"],
+          ].map(([title, desc], i) => (
+            <div key={i} className="text-white px-4">
+              <h3 className="text-lg font-semibold mb-1">{title}</h3>
+              <p className="text-xs text-slate-300">{desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* 📌 USE CASES */}
+      <section className="section-container">
+        <h2 className="text-2xl font-bold text-slate-900 text-center mb-10">
+          Where criminal screening matters most
+        </h2>
+
+        <div className="grid md:grid-cols-3 gap-8">
+          {[
+            {
+              title: "Gig & Delivery Platforms",
+              desc: "Prevent repeat offenders and protect customers in real-world interactions.",
+              img: "https://images.pexels.com/photos/6169056/pexels-photo-6169056.jpeg?auto=compress&cs=tinysrgb&w=1000",
+            },
+            {
+              title: "Healthcare & Caregiving",
+              desc: "Safeguard patients, clinics and vulnerable populations.",
+              img: "https://images.pexels.com/photos/6129507/pexels-photo-6129507.jpeg?auto=compress&cs=tinysrgb&w=1000",
+            },
+            {
+              title: "Retail & Logistics",
+              desc: "Reduce theft risk and improve store security",
+              img: "https://images.pexels.com/photos/4481257/pexels-photo-4481257.jpeg?auto=compress&cs=tinysrgb&w=1000",
+            },
+          ].map((c, i) => (
+            <div
+              key={i}
+              className="rounded-2xl border shadow-sm hover:shadow-lg transition overflow-hidden bg-white"
+            >
+              <img
+                src={c.img}
+                alt={c.title}
+                className="h-36 w-full object-cover"
+              />
+              <div className="p-6">
+                <h3 className="font-semibold text-slate-900 mb-1">{c.title}</h3>
+                <p className="text-sm text-slate-600">{c.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* 🔐 FAIRNESS & COMPLIANCE */}
+      <section className="bg-brand-primarySoft py-16">
+        <div className="section-container max-w-4xl mx-auto text-center space-y-3">
+          <h2 className="text-2xl font-bold">Fair, compliant & audit-ready</h2>
+          <p className="text-sm text-slate-700">
+            TruVerifyAI filters outdated and irrelevant records, ensuring only
+            legally permitted and role-relevant information is evaluated.
+          </p>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="bg-brand-primary text-white py-16 text-center">
+        <h2 className="text-2xl md:text-3xl font-bold">
+          Make safer hiring decisions without slowing growth.
+        </h2>
+
+        <Link
+          to="/contact"
+          className="mt-5 inline-block bg-white text-brand-primary px-8 py-3 rounded-full font-semibold"
+        >
+          Talk to our team
+        </Link>
+      </section>
+
     </div>
-  )
+  );
 }
