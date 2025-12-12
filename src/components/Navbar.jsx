@@ -1,4 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
+import logo from "../assets/logo.png";
 
 export default function Navbar() {
   const linkClass = ({ isActive }) =>
@@ -13,23 +14,24 @@ export default function Navbar() {
 
   return (
     <header className="bg-white border-b sticky top-0 z-50">
+      {/* ✅ CLEAN, BALANCED NAVBAR HEIGHT */}
       <div className="section-container flex items-center justify-between py-4 min-h-[76px]">
-
-        {/* ✅ LOGO FIXED FOR GITHUB PAGES */}
-        <Link to="/" className="flex items-center">
-          <div className="overflow-hidden w-[100px] sm:w-[120px] md:w-[140px]">
+        
+        {/* ✅ LOGO — FIXED, NO WEIRD CROPPING */}
+         <Link to="/" className="flex items-center">
+          <div className="overflow-hidden w-[120px]">
             <img
-              src="/TruVerifyAI/logo.png"
+              src={logo}     // ✅ Vite will rewrite this to: /TruVerifyAI/assets/logo-abc123.png
               alt="TruVerifyAI Logo"
               className="w-full h-auto object-contain"
             />
           </div>
         </Link>
 
-        {/* ================= NAV LINKS ================= */}
+        {/* ✅ NAV LINKS */}
         <nav className="flex items-center gap-6 relative translate-x-6">
 
-          {/* ---------- PRODUCTS DROPDOWN ---------- */}
+          {/* ================= PRODUCTS ================= */}
           <div className="relative group">
             <button className="text-sm font-medium px-3 py-2 border-b-2 border-transparent group-hover:border-brand-primary group-hover:text-brand-primary">
               Products
@@ -37,8 +39,8 @@ export default function Navbar() {
 
             <div
               className={`${dropdownBase} w-[700px] grid grid-cols-3 gap-6
-              opacity-0 invisible translate-y-1
-              group-hover:opacity-100 group-hover:visible group-hover:translate-y-0`}
+                opacity-0 invisible translate-y-1
+                group-hover:opacity-100 group-hover:visible group-hover:translate-y-0`}
             >
               <Link to="/products/identity" className="hover:text-brand-primary block">
                 <strong>Identity Verification</strong>
@@ -52,7 +54,7 @@ export default function Navbar() {
 
               <Link to="/products/employment" className="hover:text-brand-primary block">
                 <strong>Employment Verification</strong>
-                <p className="text-xs text-slate-600">Past job role history.</p>
+                <p className="text-xs text-slate-600">Past employment and role history.</p>
               </Link>
 
               <Link to="/products/education" className="hover:text-brand-primary block">
@@ -62,7 +64,7 @@ export default function Navbar() {
 
               <Link to="/products/watchlists" className="hover:text-brand-primary block">
                 <strong>Watchlists & Sanctions</strong>
-                <p className="text-xs text-slate-600">PEP, AML & global sanctions.</p>
+                <p className="text-xs text-slate-600">PEP, AML & sanctions screening.</p>
               </Link>
 
               <Link to="/products/fraud-ai" className="hover:text-brand-primary block">
@@ -72,7 +74,7 @@ export default function Navbar() {
             </div>
           </div>
 
-          {/* ---------- INDUSTRIES DROPDOWN ---------- */}
+          {/* ================= INDUSTRIES ================= */}
           <div className="relative group">
             <button className="text-sm font-medium px-3 py-2 border-b-2 border-transparent group-hover:border-brand-primary group-hover:text-brand-primary">
               Industries
@@ -80,42 +82,43 @@ export default function Navbar() {
 
             <div
               className={`${dropdownBase} w-[640px] grid grid-cols-2 gap-6
-              opacity-0 invisible translate-y-1
-              group-hover:opacity-100 group-hover:visible group-hover:translate-y-0`}
+                opacity-0 invisible translate-y-1
+                group-hover:opacity-100 group-hover:visible group-hover:translate-y-0`}
             >
               <Link to="/industries/financial-services" className="hover:text-brand-primary block">
                 <strong>Financial Services</strong>
-                <p className="text-xs text-slate-600">KYC, AML, and compliant onboarding.</p>
+                <p className="text-xs text-slate-600">KYC, AML, and risk-aligned onboarding.</p>
               </Link>
 
               <Link to="/industries/gig" className="hover:text-brand-primary block">
                 <strong>Gig & On-demand</strong>
-                <p className="text-xs text-slate-600">Drivers, riders, and delivery partners.</p>
+                <p className="text-xs text-slate-600">Drivers, couriers, and taskers at scale.</p>
               </Link>
 
               <Link to="/industries/healthcare" className="hover:text-brand-primary block">
                 <strong>Healthcare</strong>
-                <p className="text-xs text-slate-600">Credential & license verification.</p>
+                <p className="text-xs text-slate-600">Patient-centric hiring for clinical staff.</p>
               </Link>
 
               <Link to="/industries/retail" className="hover:text-brand-primary block">
                 <strong>Retail & Ecommerce</strong>
-                <p className="text-xs text-slate-600">Store & warehouse hiring.</p>
+                <p className="text-xs text-slate-600">Store, warehouse, and HQ roles.</p>
               </Link>
 
               <Link to="/industries/staffing" className="hover:text-brand-primary block">
                 <strong>Staffing & Recruiting</strong>
-                <p className="text-xs text-slate-600">Bulk candidate screening.</p>
+                <p className="text-xs text-slate-600">Client-ready screening packages.</p>
               </Link>
 
               <Link to="/industries/technology" className="hover:text-brand-primary block">
                 <strong>Technology & SaaS</strong>
-                <p className="text-xs text-slate-600">Remote-ready verification.</p>
+                <p className="text-xs text-slate-600">Remote-friendly, security-conscious hiring.</p>
               </Link>
             </div>
           </div>
 
-          {/* ---------- STATIC LINKS ---------- */}
+          {/* ================= NORMAL LINKS ================= */}
+
           <NavLink to="/pricing" className={linkClass}>
             Pricing
           </NavLink>
@@ -129,7 +132,7 @@ export default function Navbar() {
           </NavLink>
         </nav>
 
-        {/* ---------- RIGHT SIDE BUTTONS ---------- */}
+        {/* ================= RIGHT SIDE ================= */}
         <div className="flex items-center gap-4">
           <Link to="/login" className="text-sm font-medium">
             Client LogIn
