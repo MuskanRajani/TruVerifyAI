@@ -105,6 +105,52 @@ export default function EmploymentProduct() {
           ))}
         </div>
       </section>
+      {/* ❓ EMPLOYMENT VERIFICATION FAQs */}
+<section className="section-container py-20">
+  <div className="max-w-3xl mx-auto">
+    <p className="text-xs uppercase tracking-[0.25em] text-brand-primary font-semibold text-center mb-3">
+      FAQs
+    </p>
+
+    <h2 className="text-2xl md:text-3xl font-bold text-center mb-10">
+      Employment verification — frequently asked questions
+    </h2>
+
+    <div className="space-y-4">
+      {[
+        {
+          q: "What employment details are verified?",
+          a: "Previous employer name, role title, employment duration and (where permitted) reason for exit."
+        },
+        {
+          q: "How is employment verified?",
+          a: "Verification is completed through document checks, employer confirmation or trusted data sources depending on region."
+        },
+        {
+          q: "Can gaps or overlaps be detected?",
+          a: "Yes. TruVerifyAI highlights inconsistencies such as unexplained gaps or overlapping employment periods."
+        },
+        {
+          q: "What if an employer does not respond?",
+          a: "The case is flagged with notes and alternate validation options may be suggested based on availability."
+        },
+        {
+          q: "Is candidate consent required?",
+          a: "Yes. Employment verification is initiated only after candidate authorization."
+        }
+      ].map((item, i) => (
+        <details key={i} className="border rounded-xl bg-white p-5">
+          <summary className="flex justify-between cursor-pointer font-medium">
+            {item.q}
+            <span className="text-brand-primary text-xl">+</span>
+          </summary>
+          <p className="mt-3 text-sm text-slate-600">{item.a}</p>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>
+
 
       {/* 🔐 SECURITY & COMPLIANCE */}
       <section className="bg-brand-primarySoft py-16">

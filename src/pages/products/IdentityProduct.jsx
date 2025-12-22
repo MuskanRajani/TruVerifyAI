@@ -17,7 +17,7 @@ export default function IdentityProduct() {
           </h1>
 
           <p className="text-sm md:text-base text-slate-600">
-            TruVerifyAI provides liveness detection, document validation, and biometric matching  
+            TruVerifyAI provides liveness detection, document validation, and biometric matching
             — ensuring that every candidate is who they claim to be.
           </p>
 
@@ -44,8 +44,8 @@ export default function IdentityProduct() {
           </h2>
 
           <p className="text-sm text-slate-600 leading-relaxed">
-            Identity verification is the first step in preventing fraud and ensuring safe hiring.  
-            TruVerifyAI analyzes ID documents, detects tampering, and compares biometric signatures  
+            Identity verification is the first step in preventing fraud and ensuring safe hiring.
+            TruVerifyAI analyzes ID documents, detects tampering, and compares biometric signatures
             to validate the authenticity of each candidate.
           </p>
 
@@ -106,6 +106,53 @@ export default function IdentityProduct() {
           ))}
         </div>
       </section>
+
+      {/* ❓ IDENTITY VERIFICATION FAQs */}
+      <section className="section-container py-20">
+        <div className="max-w-3xl mx-auto">
+          <p className="text-xs uppercase tracking-[0.25em] text-brand-primary font-semibold text-center mb-3">
+            FAQs
+          </p>
+
+          <h2 className="text-2xl md:text-3xl font-bold text-slate-900 text-center mb-10">
+            Identity verification — frequently asked questions
+          </h2>
+
+          <div className="space-y-4">
+            {[
+              {
+                q: "What documents are supported for identity verification?",
+                a: "TruVerifyAI supports government-issued IDs such as passports, national IDs and driver licenses, depending on country-specific availability."
+              },
+              {
+                q: "How does liveness detection work?",
+                a: "Passive liveness detection analyzes facial movement and image authenticity to confirm that the person is physically present during verification."
+              },
+              {
+                q: "Can identity checks be completed remotely?",
+                a: "Yes. All identity verification flows are mobile-friendly and designed for remote candidate onboarding."
+              },
+              {
+                q: "What happens if identity verification fails?",
+                a: "Failed or inconclusive cases are flagged with reason codes and supporting signals so your team can review or re-initiate verification."
+              },
+              {
+                q: "Is identity data stored securely?",
+                a: "All identity data is encrypted in transit and at rest, with strict access controls and audit logging."
+              }
+            ].map((item, i) => (
+              <details key={i} className="group border rounded-xl bg-white p-5">
+                <summary className="flex justify-between cursor-pointer font-medium">
+                  {item.q}
+                  <span className="text-brand-primary text-xl group-open:rotate-45">+</span>
+                </summary>
+                <p className="mt-3 text-sm text-slate-600">{item.a}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
 
       {/* 🔐 SECURITY & COMPLIANCE */}
       <section className="bg-brand-primarySoft py-16">

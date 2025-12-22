@@ -4,113 +4,215 @@ export default function WatchlistsProduct() {
   return (
     <div className="space-y-24">
 
-      {/* 🌟 HERO */}
+      {/* ================= HERO ================= */}
       <section className="relative py-24 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-yellow-100/40 via-orange-100/30 to-white" />
-        <div className="section-container relative z-10 max-w-3xl mx-auto text-center space-y-4">
+        <div className="absolute inset-0 bg-gradient-to-br from-amber-50 via-orange-100/30 to-white" />
+        <div className="section-container relative z-10 max-w-3xl mx-auto text-center space-y-5">
           <p className="text-xs uppercase tracking-[0.25em] text-brand-primary font-semibold">
-            Watchlists & Sanctions
+            Watchlists & Sanctions Screening
           </p>
 
-          <h1 className="text-4xl md:text-5xl font-bold text-slate-900">
-            Screen candidates against global risk lists in one click.
+          <h1 className="text-4xl md:text-5xl font-bold text-slate-900 leading-tight">
+            Reduce regulatory and reputational risk before it becomes a problem.
           </h1>
 
           <p className="text-sm md:text-base text-slate-600">
-            Check individuals against PEP, AML and international sanctions databases to reduce
-            regulatory and reputational risk.
+            Screen candidates against global sanctions, PEP and AML watchlists —
+            with structured review, audit trails and compliance-ready decisions.
           </p>
 
           <Link
             to="/contact"
-            className="mt-4 inline-block bg-brand-primary text-white px-8 py-3 rounded-full font-semibold"
+            className="inline-block bg-brand-primary text-white px-8 py-3 rounded-full font-semibold"
           >
             Request a demo
           </Link>
         </div>
       </section>
 
-      {/* 🖼 FEATURE IMAGE + DESCRIPTION */}
-      <section className="section-container grid md:grid-cols-2 gap-12 items-center">
-        <img
-          src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1400&q=80"
-          className="rounded-3xl shadow-xl object-cover max-h-[440px]"
-          alt="Watchlists & sanctions screening"
-        />
-
+      {/* ================= OVERVIEW + IMAGE ================= */}
+      <section className="section-container grid md:grid-cols-2 gap-14 items-center">
         <div className="space-y-4">
           <h2 className="text-2xl md:text-3xl font-bold text-slate-900">
-            One view of global risk signals.
+            One consolidated view of global risk exposure.
           </h2>
 
           <p className="text-sm text-slate-600 leading-relaxed">
-            TruVerifyAI surfaces potential matches across global watchlists, then lets your
-            compliance or risk team review, annotate and document decisions in a single place.
+            Watchlist and sanctions screening is essential for regulated and
+            trust-sensitive roles. TruVerifyAI aggregates multiple international
+            risk sources and presents potential matches with context.
+          </p>
+
+          <p className="text-sm text-slate-600 leading-relaxed">
+            Instead of raw alerts, your teams get structured signals,
+            confidence indicators and decision-ready workflows.
           </p>
 
           <ul className="list-disc list-inside text-sm text-slate-700 space-y-1">
-            <li>PEP (Politically Exposed Persons) checks</li>
-            <li>International sanctions & enforcement lists</li>
-            <li>AML and financial crime watchlists</li>
-            <li>Case notes and decision audit trails</li>
+            <li>PEP (Politically Exposed Persons)</li>
+            <li>Global sanctions & embargo lists</li>
+            <li>AML & financial crime watchlists</li>
+            <li>Centralized audit & review trail</li>
           </ul>
+        </div>
+
+        <img
+          src="https://images.pexels.com/photos/4386375/pexels-photo-4386375.jpeg?auto=compress&cs=tinysrgb&w=1200"
+          alt="Compliance and risk screening dashboard"
+          className="rounded-3xl shadow-xl object-cover max-h-[460px] w-full"
+        />
+      </section>
+
+      {/* ================= HOW IT WORKS (WITH VISUALS) ================= */}
+      <section className="bg-slate-50 py-20">
+        <div className="section-container">
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-14">
+            How watchlist screening works
+          </h2>
+
+          <div className="grid md:grid-cols-4 gap-8">
+            {[
+              {
+                title: "Screening",
+                desc: "Candidate details are checked against global risk databases.",
+                img: "https://images.pexels.com/photos/6770775/pexels-photo-6770775.jpeg?auto=compress&cs=tinysrgb&w=800"
+              },
+              {
+                title: "Match confidence",
+                desc: "Potential matches are scored by similarity and relevance.",
+                img: "https://images.pexels.com/photos/6693651/pexels-photo-6693651.jpeg?auto=compress&cs=tinysrgb&w=800"
+              },
+              {
+                title: "Human review",
+                desc: "Compliance teams validate matches with supporting context.",
+                img: "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=800"
+              },
+              {
+                title: "Decision logging",
+                desc: "Final decisions are recorded with full audit history.",
+                img: "https://images.pexels.com/photos/5668858/pexels-photo-5668858.jpeg?auto=compress&cs=tinysrgb&w=800"
+              }
+            ].map((s, i) => (
+              <div
+                key={i}
+                className="bg-white rounded-2xl border shadow-sm overflow-hidden"
+              >
+                <img
+                  src={s.img}
+                  alt={s.title}
+                  className="h-36 w-full object-cover"
+                />
+                <div className="p-5">
+                  <h4 className="font-semibold mb-1">{s.title}</h4>
+                  <p className="text-sm text-slate-600">{s.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* ⚡ HIGHLIGHT METRICS */}
-      <section className="section-container grid md:grid-cols-3 gap-6">
-        {[
-          ["2000+", "Lists monitored via partners"],
-          ["Real-time", "Risk list updates"],
-          ["Single view", "Consolidated match review"],
-        ].map(([v, l], i) => (
-          <div
-            key={i}
-            className="p-6 bg-brand-primary text-white rounded-2xl shadow-md text-center"
-          >
-            <div className="text-3xl font-bold">{v}</div>
-            <p className="text-xs mt-1 text-orange-100">{l}</p>
-          </div>
-        ))}
-      </section>
-
-      {/* USE CASES */}
-      <section className="section-container space-y-8">
-        <h2 className="text-2xl font-bold text-slate-900 text-center">
-          Ideal for risk-sensitive hiring
+      {/* ================= WHO USES THIS ================= */}
+      <section className="section-container py-20">
+        <h2 className="text-2xl font-bold text-center mb-12">
+          Common use cases across industries
         </h2>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-10">
           {[
             {
-              title: "Fintech & payments",
-              desc: "Screen high-risk and high-value roles handling customer funds.",
+              title: "Fintech & Payments",
+              desc: "Support AML programs and regulator expectations.",
+              img: "https://images.pexels.com/photos/7567527/pexels-photo-7567527.jpeg?auto=compress&cs=tinysrgb&w=900"
             },
             {
               title: "Banking & NBFCs",
-              desc: "Support AML programs with consistent candidate screening.",
+              desc: "Ensure leadership and risk roles meet compliance thresholds.",
+              img: "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=900"
             },
             {
-              title: "Compliance-heavy roles",
-              desc: "Add an extra layer of diligence for senior and regulated positions.",
-            },
-          ].map((card, i) => (
+              title: "Enterprise & Regulated Firms",
+              desc: "Add diligence for senior and trust-sensitive positions.",
+              img: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=900"
+            }
+          ].map((c, i) => (
             <div
               key={i}
-              className="p-6 bg-white rounded-xl border shadow-sm hover:shadow-lg transition"
+              className="rounded-2xl border bg-white shadow-sm overflow-hidden"
             >
-              <h3 className="font-semibold text-slate-900 mb-1">{card.title}</h3>
-              <p className="text-sm text-slate-600">{card.desc}</p>
+              <img
+                src={c.img}
+                alt={c.title}
+                className="h-40 w-full object-cover"
+              />
+              <div className="p-6">
+                <h3 className="font-semibold text-lg mb-1">{c.title}</h3>
+                <p className="text-sm text-slate-600">{c.desc}</p>
+              </div>
             </div>
           ))}
         </div>
       </section>
 
-      {/* CTA */}
+      {/* ================= FAQs ================= */}
+<section className="section-container pt-8 pb-12">
+  <div className="max-w-3xl mx-auto">
+    <p className="text-xs uppercase tracking-[0.25em] text-brand-primary font-semibold text-center mb-2">
+      FAQs
+    </p>
+
+    <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">
+      Watchlists & sanctions — frequently asked questions
+    </h2>
+
+    <div className="space-y-4">
+      {[
+        {
+          q: "What watchlists are checked?",
+          a: "Global sanctions lists, PEP databases and regulatory enforcement lists depending on region."
+        },
+        {
+          q: "How often is watchlist data updated?",
+          a: "Data sources are refreshed regularly to ensure current risk indicators."
+        },
+        {
+          q: "What happens when a match is found?",
+          a: "Matches are flagged with confidence indicators and reviewed by compliance teams."
+        },
+        {
+          q: "Can false positives occur?",
+          a: "Yes. Contextual data and match strength help reduce unnecessary escalations."
+        },
+        {
+          q: "Is this required for all roles?",
+          a: "Typically used for regulated, senior or trust-sensitive positions."
+        }
+      ].map((item, i) => (
+        <details
+          key={i}
+          className="border rounded-xl bg-white p-5 hover:shadow-sm transition"
+        >
+          <summary className="flex justify-between cursor-pointer font-medium">
+            {item.q}
+            <span className="text-brand-primary text-xl">+</span>
+          </summary>
+          <p className="mt-3 text-sm text-slate-600 leading-relaxed">
+            {item.a}
+          </p>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>
+
+
+      {/* ================= CTA ================= */}
       <section className="bg-brand-primary text-white py-16 text-center">
-        <h2 className="text-2xl md:text-3xl font-bold">Stay ahead of regulatory expectations.</h2>
-        <p className="text-sm text-orange-200 mt-2">
-          Add watchlist screening wherever compliance and reputation matter most.
+        <h2 className="text-2xl md:text-3xl font-bold">
+          Stay ahead of regulatory expectations.
+        </h2>
+        <p className="text-sm text-orange-200 mt-2 max-w-xl mx-auto">
+          Add watchlist and sanctions screening wherever trust and compliance matter.
         </p>
 
         <Link

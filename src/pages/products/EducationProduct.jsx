@@ -84,7 +84,7 @@ export default function EducationProduct() {
         </div>
       </section>
 
-    
+
       {/* 🌍 GLOBAL COVERAGE + COMPLIANCE */}
       <section className="section-container grid md:grid-cols-2 gap-12 items-center">
 
@@ -165,6 +165,70 @@ export default function EducationProduct() {
 
         </div>
       </section>
+
+      {/* ❓ EDUCATION VERIFICATION FAQs */}
+      <section className="section-container py-20">
+        <div className="max-w-3xl mx-auto">
+
+          <p className="text-xs uppercase tracking-[0.25em] text-brand-primary font-semibold text-center mb-3">
+            FAQs
+          </p>
+
+          <h2 className="text-2xl md:text-3xl font-bold text-slate-900 text-center mb-10">
+            Education verification — frequently asked questions
+          </h2>
+
+          <div className="space-y-4">
+
+            {[
+              {
+                q: "What education credentials can be verified?",
+                a: "TruVerifyAI verifies degrees, diplomas, certifications and course completions based on documents provided by the candidate and institution-specific validation processes."
+              },
+              {
+                q: "Do you contact universities and colleges directly?",
+                a: "Verification is performed through document review, institution validation processes and trusted third-party sources where available, depending on country and institution."
+              },
+              {
+                q: "How do you handle international education checks?",
+                a: "International education verification is supported across multiple regions, with country-specific handling for formats, institutions and document standards."
+              },
+              {
+                q: "How long does education verification take?",
+                a: "Timelines vary based on institution responsiveness and geography. Most education checks are completed within a few business days with real-time status tracking."
+              },
+              {
+                q: "What happens if an education record cannot be verified?",
+                a: "If verification cannot be completed, the case is clearly flagged with reasons and supporting notes, allowing your team to make an informed decision."
+              },
+              {
+                q: "Is candidate consent required for education checks?",
+                a: "Yes. TruVerifyAI ensures candidate authorization is collected before initiating any education verification."
+              }
+            ].map((item, index) => (
+              <details
+                key={index}
+                className="group border border-slate-200 rounded-xl bg-white p-5 open:shadow-md transition"
+              >
+                <summary className="flex justify-between items-center cursor-pointer list-none">
+                  <span className="font-medium text-slate-900">
+                    {item.q}
+                  </span>
+                  <span className="text-brand-primary text-xl group-open:rotate-45 transition">
+                    +
+                  </span>
+                </summary>
+
+                <p className="mt-3 text-sm text-slate-600 leading-relaxed">
+                  {item.a}
+                </p>
+              </details>
+            ))}
+
+          </div>
+        </div>
+      </section>
+
 
       {/* 🔐 SECURITY + DATA INTEGRITY */}
       <section className="bg-brand-primarySoft py-16">

@@ -1,6 +1,5 @@
 
 import verificationsChart from "../assets/verifications.png";
-import statusChart from "../assets/status.png";
 import typesChart from "../assets/types.png";
 
 export default function Dashboard() {

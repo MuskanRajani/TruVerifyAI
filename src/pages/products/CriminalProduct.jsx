@@ -116,6 +116,70 @@ export default function CriminalProduct() {
         </div>
       </section>
 
+      {/* ❓ CRIMINAL BACKGROUND CHECK FAQs */}
+      <section className="section-container py-20">
+        <div className="max-w-3xl mx-auto">
+
+          <p className="text-xs uppercase tracking-[0.25em] text-brand-primary font-semibold text-center mb-3">
+            FAQs
+          </p>
+
+          <h2 className="text-2xl md:text-3xl font-bold text-slate-900 text-center mb-10">
+            Criminal background screening — common questions
+          </h2>
+
+          <div className="space-y-4">
+
+            {[
+              {
+                q: "What type of criminal records are checked?",
+                a: "TruVerifyAI accesses legally permissible police and court records through accredited regional partners. The scope of checks depends on country, role type, and local regulations."
+              },
+              {
+                q: "Does a criminal record automatically disqualify a candidate?",
+                a: "No. Criminal results are contextualized based on recency, severity, and relevance to the role. Final hiring decisions always remain with your organization."
+              },
+              {
+                q: "Are checks compliant with local laws and regulations?",
+                a: "Yes. All criminal background checks follow jurisdiction-specific laws, including restrictions on data access, lookback periods, and candidate consent requirements."
+              },
+              {
+                q: "How long does criminal verification take?",
+                a: "Turnaround time varies by country and data source. Most checks are completed within a few business days, with real-time status visibility for your team."
+              },
+              {
+                q: "Is candidate consent required?",
+                a: "Absolutely. TruVerifyAI ensures explicit candidate consent is collected before initiating any criminal background screening."
+              },
+              {
+                q: "How are sensitive criminal records handled?",
+                a: "All data is encrypted in transit and at rest, with strict role-based access controls and audit logs to ensure confidentiality and compliance."
+              }
+            ].map((item, index) => (
+              <details
+                key={index}
+                className="group border border-slate-200 rounded-xl bg-white p-5 open:shadow-md transition"
+              >
+                <summary className="flex justify-between items-center cursor-pointer list-none">
+                  <span className="font-medium text-slate-900">
+                    {item.q}
+                  </span>
+                  <span className="text-brand-primary text-xl group-open:rotate-45 transition">
+                    +
+                  </span>
+                </summary>
+
+                <p className="mt-3 text-sm text-slate-600 leading-relaxed">
+                  {item.a}
+                </p>
+              </details>
+            ))}
+
+          </div>
+        </div>
+      </section>
+
+
       {/* 🔐 FAIRNESS & COMPLIANCE */}
       <section className="bg-brand-primarySoft py-16">
         <div className="section-container max-w-4xl mx-auto text-center space-y-3">

@@ -67,9 +67,9 @@ export default function Navbar() {
                 <p className="text-xs text-slate-600">PEP, AML & sanctions screening.</p>
               </Link>
 
-              <Link to="/products/fraud-ai" className="hover:text-brand-primary block">
-                <strong>Fraud AI</strong>
-                <p className="text-xs text-slate-600">Document tampering & risk scoring.</p>
+              <Link to="/products/occupational-health" className="hover:text-brand-primary block">
+                <strong>Occupational Health</strong>
+                <p className="text-xs text-slate-600">Drug Testing and immunization.</p>
               </Link>
             </div>
           </div>
