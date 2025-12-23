@@ -77,7 +77,7 @@ export default function Company() {
 
         <p className="text-sm text-slate-600 leading-relaxed">
           Instead of rigid packages, we enable teams to choose exactly the checks they need —
-          identity, employment, education, criminal screening, watchlists and fraud AI — and apply
+          identity, employment, education, criminal screening, watchlists and Occupational — and apply
           them across roles, regions and risk profiles.
         </p>
       </section>

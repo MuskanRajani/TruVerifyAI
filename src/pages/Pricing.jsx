@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Pricing() {
   return (
     <div className="section-container py-10 text-sm space-y-6">
@@ -19,9 +21,13 @@ export default function Pricing() {
             <li>Core checks for identity & employment</li>
             <li>Email support</li>
           </ul>
-          <button className="mt-auto w-full py-2 border rounded-full text-slate-800 hover:bg-slate-50">
+          <Link
+            to="/contact?plan=launch"
+            className="mt-auto w-full py-2 border rounded-full text-slate-800 hover:bg-slate-50 text-center"
+          >
             Talk to us
-          </button>
+          </Link>
+
         </div>
 
         <div className="card-soft p-5 flex flex-col relative overflow-hidden border border-orange-200">
@@ -36,9 +42,13 @@ export default function Pricing() {
             <li>Priority support</li>
             <li>Sandbox for integrations</li>
           </ul>
-          <button className="mt-auto w-full py-2 rounded-full bg-brand-primary text-white">
+          <Link
+            to="/contact?plan=growth"
+            className="mt-auto w-full py-2 rounded-full bg-brand-primary text-white text-center"
+          >
             Request quote
-          </button>
+          </Link>
+
         </div>
 
         <div className="card-soft p-5 flex flex-col">
@@ -50,9 +60,12 @@ export default function Pricing() {
             <li>Dedicated success & security review</li>
             <li>Advanced compliance & data residency needs</li>
           </ul>
-          <button className="mt-auto w-full py-2 border rounded-full text-slate-800 hover:bg-slate-50">
-            Contact sales
-          </button>
+          <Link
+            to="/contact?plan=launch"
+            className="mt-auto w-full py-2 border rounded-full text-slate-800 hover:bg-slate-50 text-center"
+          >
+            Talk to us
+          </Link>
         </div>
       </div>
     </div>

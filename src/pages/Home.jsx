@@ -308,15 +308,12 @@ export default function Home() {
   ))}
 </div>
 
+<Link to="/products" className="inline-block mt-5 text-sm font-semibold text-brand-primary hover:underline"
+          >
 
-
-
-                <a
-                  href="/products"
-                  className="inline-block mt-5 text-sm font-semibold text-brand-primary hover:underline"
-                >
+               
                   Explore all products →
-                </a>
+                </Link>
               </div>
 
               {/* INDUSTRIES */}
@@ -342,15 +339,12 @@ export default function Home() {
     </div>
   ))}
 </div>
+<Link to="/industries" className="inline-block mt-5 text-sm font-semibold text-brand-primary hover:underline"
+          >
 
-
-                <a
-                  href="/industries"
-                  className="inline-block mt-5 text-sm font-semibold text-brand-primary hover:underline"
-                >
-                  Explore all industries →
-                </a>
-              </div>
+                 Explore all industries →
+                </Link>
+             </div>
             </div>
           </div>
         </div>

@@ -79,7 +79,7 @@ export default function Products() {
         <h1 className="text-2xl sm:text-3xl font-bold mb-3">Everything you need, nothing you don&apos;t</h1>
         <p className="text-slate-600 max-w-3xl">
           TruVerifyAI gives you modular building blocks — identity, employment, education, criminal (via partners),
-          watchlists, and fraud AI — so you can design the right level of screening for each role and region.
+          watchlists, and Occupational — so you can design the right level of screening for each role and region.
         </p>
       </section>
 

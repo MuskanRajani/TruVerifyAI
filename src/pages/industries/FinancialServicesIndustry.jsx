@@ -69,7 +69,7 @@ export default function FinancialServicesIndustry() {
             ["AML & Watchlists", "Screen candidates against PEP, sanctions and global enforcement databases."],
             ["Employment & Role Validation", "Confirm experience accurately for sensitive financial roles."],
             ["Criminal Background Screening", "Identify legal risks before granting financial access."],
-            ["Fraud AI Scoring", "Detect synthetic identities and forgery-based onboarding attempts."],
+            ["Occupational Screening", "Detect synthetic identities and forgery-based onboarding attempts."],
             ["Audit Trails & Reporting", "Full traceability for regulators and internal compliance reviews."],
             ["Role-Based Access Controls", "Limit data visibility across HR, risk and security teams."],
             ["Data Encryption & Retention", "Secure candidate data across its entire lifecycle."],
@@ -102,7 +102,7 @@ export default function FinancialServicesIndustry() {
             {[
               ["01", "Candidate submits identity & financial employment data"],
               ["02", "KYC, AML and criminal checks initiated instantly"],
-              ["03", "Fraud AI evaluates document and behavior risk"],
+              ["03", "Occupational Health and screening"],
               ["04", "Final compliance report issued with audit logs"],
             ].map(([step, text], i) => (
               <div

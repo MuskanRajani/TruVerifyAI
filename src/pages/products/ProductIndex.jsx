@@ -33,9 +33,9 @@ export default function ProductIndex() {
       img: "https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=900",
     },
     {
-      title: "Fraud AI & Risk Scoring",
-      desc: "Detect tampered documents, synthetic identities and fraud patterns.",
-      link: "/products/fraud-ai",
+      title: "Occupational Health & Screening",
+      desc: "Drug Testing, Immunization and other health screenings.",
+      link: "/products/occupational-health",
       img: "https://images.pexels.com/photos/1181346/pexels-photo-1181346.jpeg?auto=compress&cs=tinysrgb&w=900",
     },
   ];
