@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url><loc>https://www.truverifyai.com/</loc></url>
+  <url><loc>https://truverifyai.com/#/pricing</loc></url>
+  <url><loc>https://truverifyai.com/#/contact</loc></url>
+  <url><loc>https://truverifyai.com/#/resources</loc></url>
+
+  <!-- Product Pages -->
+  <url><loc>https://www.truverifyai.com/#/products/identity</loc></url>
+  <url><loc>https://www.truverifyai.com/#/products/employment</loc></url>
+  <url><loc>https://www.truverifyai.com/#/products/education</loc></url>
+  <url><loc>https://www.truverifyai.com/#/products/watchlists</loc></url>
+  <url><loc>https://www.truverifyai.com/#/products/occupational-health</loc></url>
+
+</urlset>
