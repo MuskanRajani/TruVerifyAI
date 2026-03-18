@@ -92,11 +92,13 @@ export default function Footer() {
             </li>
             <li>
               <span className="block text-slate-500">Phone</span>
-              +1-201-279-3907
+              +(929) 512-5858
             </li>
             <li>
               <span className="block text-slate-500">Address</span>
-              India • Remote-first
+              CONNIE CAMP CEO TRUVERIFYAI INC.
+              11C PIPING ROCK DR,
+              OSSINING, NY, 10562, USA
             </li>
           </ul>
         </div>
