@@ -88,7 +88,7 @@ export default function Footer() {
           <ul className="space-y-2 text-slate-400">
             <li>
               <span className="block text-slate-500">Email</span>
-              Info@truverify.com
+              Info@truverifyai.com
             </li>
             <li>
               <span className="block text-slate-500">Phone</span>
