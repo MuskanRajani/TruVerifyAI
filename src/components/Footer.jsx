@@ -96,7 +96,6 @@ export default function Footer() {
             </li>
             <li>
               <span className="block text-slate-500">Address</span>
-              CONNIE CAMP CEO TRUVERIFYAI INC.
               11C PIPING ROCK DR,
               OSSINING, NY, 10562, USA
             </li>
