@@ -23,8 +23,8 @@ export default function Footer() {
           </p>
 
           {/* SOCIAL ICONS */}
-          <div className="flex items-center gap-4 mt-4">
-            <a href="https://www.linkedin.com" target="_blank" rel="noreferrer" className="hover:text-white transition">
+          {/* <div className="flex items-center gap-4 mt-4">
+            <a href="https://www.linkedin.com/in/truverifyai/" target="_blank" rel="noreferrer" className="hover:text-white transition">
               <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM0 24h5V7H0v17zM7.5 7h4.8v2.2h.07C13.17 7.78 15.06 7 17.23 7 22.08 7 23 10.05 23 14.08V24h-5v-8.22c0-1.96 0-4.48-2.73-4.48-2.74 0-3.16 2.14-3.16 4.35V24h-5V7z" />
               </svg>
@@ -42,7 +42,7 @@ export default function Footer() {
               </svg>
             </a>
 
-          </div>
+          </div> */}
         </div>
 
         {/* PRODUCT */}

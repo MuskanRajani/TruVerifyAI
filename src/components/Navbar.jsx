@@ -134,11 +134,27 @@ export default function Navbar() {
         </div>
 
         {/* MOBILE TOGGLE */}
-        <button onClick={() => setOpen(!open)} className="md:hidden w-7 h-7 flex flex-col items-center justify-center">
-          <span className="w-5 h-[2px] bg-slate-700 mb-1 rounded"></span>
-          <span className="w-5 h-[2px] bg-slate-700 mb-1 rounded"></span>
-          <span className="w-5 h-[2px] bg-slate-700 rounded"></span>
-        </button>
+        <div className="md:hidden flex items-center gap-3">
+  
+  {/* Client Login */}
+  <Link
+  to="/login"
+  className="bg-brand-primary text-white px-3 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap hover:opacity-90 transition"
+>
+  Client LogIn
+</Link>
+
+  {/* Hamburger */}
+  <button
+    onClick={() => setOpen(!open)}
+    className="w-7 h-7 flex flex-col items-center justify-center"
+  >
+    <span className="w-5 h-[2px] bg-slate-700 mb-1 rounded"></span>
+    <span className="w-5 h-[2px] bg-slate-700 mb-1 rounded"></span>
+    <span className="w-5 h-[2px] bg-slate-700 rounded"></span>
+  </button>
+
+</div>
       </div>
 
       {/* ===== MOBILE MENU UPDATED ===== */}
