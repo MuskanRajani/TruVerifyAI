@@ -5,25 +5,25 @@ const testimonials = [
   {
     quote:
       "Before TruVerifyAI, our team was juggling multiple vendors and endless follow-ups. Now we track identity, employment and criminal checks in one place with full visibility.",
-    name: "Priya Mehta",
+    name: "Mark",
     company: "Talent Operations Lead, Fintech Startup",
   },
   {
     quote:
       "We onboard thousands of gig workers every month. TruVerifyAI helped us cut our verification turnaround time by more than half without increasing risk.",
-    name: "Rohit Sharma",
+    name: "Clint",
     company: "Head of Operations, Gig Marketplace",
   },
   {
     quote:
       "Audit trails, role-based access and clean compliance records made our legal and risk reviews far smoother than before.",
-    name: "Ananya Rao",
+    name: "Monica",
     company: "Risk & Compliance Manager, Financial Services",
   },
   {
     quote:
       "Our staffing clients demand speed and accuracy. TruVerifyAI gave us both, without adding operational burden on recruiters.",
-    name: "Neha Kapoor",
+    name: "Neha",
     company: "Director, Staffing & Recruitment Firm",
   },
 ];

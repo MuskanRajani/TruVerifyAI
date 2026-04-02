@@ -88,15 +88,16 @@ export default function Footer() {
           <ul className="space-y-2 text-slate-400">
             <li>
               <span className="block text-slate-500">Email</span>
-              Info@truverify.com
+              Info@truverifyai.com
             </li>
             <li>
               <span className="block text-slate-500">Phone</span>
-              +1-201-279-3907
+              +(929) 512-5858
             </li>
             <li>
               <span className="block text-slate-500">Address</span>
-              India • Remote-first
+              11C PIPING ROCK DR,
+              OSSINING, NY, 10562, USA
             </li>
           </ul>
         </div>
