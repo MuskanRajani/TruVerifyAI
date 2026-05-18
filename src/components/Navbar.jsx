@@ -127,7 +127,14 @@ export default function Navbar() {
 
         {/* DESKTOP RIGHT — untouched */}
         <div className="hidden md:flex items-center gap-3">
-          <Link to="/login" className="text-sm font-medium">Client LogIn</Link>
+          <a
+  href="https://truverifyai.instascreen.net/sso/login.taz"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="text-sm font-medium"
+>
+  Client LogIn
+</a>
           <Link to="/contact" className="bg-brand-primary text-white px-4 py-2 rounded-full text-xs font-semibold hover:opacity-90">
             Request demo
           </Link>
@@ -137,12 +144,14 @@ export default function Navbar() {
         <div className="md:hidden flex items-center gap-3">
   
   {/* Client Login */}
-  <Link
-  to="/login"
-  className="bg-brand-primary text-white px-3 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap hover:opacity-90 transition"
+ <a
+  href="https://truverifyai.instascreen.net/sso/login.taz"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="text-sm font-medium"
 >
   Client LogIn
-</Link>
+</a>
 
   {/* Hamburger */}
   <button
