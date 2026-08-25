@@ -95,9 +95,14 @@ export default function Footer() {
               +(929) 512-5858
             </li>
             <li>
-              <span className="block text-slate-500">Address</span>
+              <span className="block text-slate-500">Primary Address</span>
               11C PIPING ROCK DR,
               OSSINING, NY, 10562, USA
+            </li>
+            <li>
+              <span className="block text-slate-500">Mailing Address</span>
+              PO BOX 16,
+              ROSEBUSH, MI, 48878, USA
             </li>
           </ul>
         </div>
