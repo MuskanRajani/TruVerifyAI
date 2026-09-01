@@ -94,10 +94,9 @@ export default function Footer() {
               <span className="block text-slate-500">Phone</span>
               +(929) 512-5858
             </li>
-            <li>
+             <li>
               <span className="block text-slate-500">Primary Address</span>
-              11C PIPING ROCK DR,
-              OSSINING, NY, 10562, USA
+              3986 SOUTH ST ROSEBUSH, MI, 48878-5006 ,USA
             </li>
             <li>
               <span className="block text-slate-500">Mailing Address</span>
